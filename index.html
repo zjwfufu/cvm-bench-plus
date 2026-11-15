@@ -7,19 +7,18 @@
   <meta name="theme-color" content="#ffffff">
   <title>cvm-bench-plus</title>
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="style.css?v=2">
+  <link rel="stylesheet" href="style.css?v=3">
   <script defer src="catalog.js?v=1"></script>
-  <script defer src="app.js?v=2"></script>
+  <script defer src="app.js?v=3"></script>
 </head>
 <body>
   <a href="#results" class="skip">Skip to cases</a>
-  <header class="topbar"><a href="#" class="brand" aria-label="cvm-bench-plus home">cvm-bench-plus</a><nav class="page-nav" aria-label="Page sections"><a href="#overview">Overview</a><a href="#cases">Browse cases</a></nav></header>
-  <section id="teaser" class="teaser" aria-label="Examples from eight application domains"></section>
+  <header class="topbar"><a href="#" class="brand" aria-label="cvm-bench-plus home">cvm-bench-plus</a><span class="edition">Dataset browser</span></header>
   <div class="layout">
     <main>
-      <section class="intro" id="overview"><div><h1>cvm-bench-plus</h1><p class="subtitle">A visual benchmark for<br>code-driven video generation</p></div><div class="intro-copy"><p class="lede">A collection of <span id="total-cases">220</span> cases across eight application domains, from architectural cinematics to robotics and scene editing.</p><p>Each case presents a code-rendered video alongside its visual reference and full prompt. Paired cases retain their A/B variants for comparison.</p><a class="browse-link" href="#cases">Browse the collection <span aria-hidden="true">↓</span></a></div></section>
+      <section class="intro" id="overview"><p class="index-label">VIDEO · REFERENCE · PROMPT</p><h1>cvm-bench-plus</h1><p class="lede">Code-rendered videos and visual references across eight application domains.</p><p class="collection-meta"><span><b id="total-cases">220</b> cases</span><span><b>8</b> domains</span><span>A/B comparisons</span></p></section>
       <section class="browser" id="cases" aria-label="Dataset cases">
-        <div class="section-heading"><h2>The collection</h2><p>Select a domain, then open a case to view its video, reference and prompt.</p></div>
+        <div class="section-heading"><h2>Browse by domain</h2><p>Open any case to compare the video and reference, or read the full prompt.</p></div>
         <nav id="categories" aria-label="Filter by application"></nav>
         <div class="toolbar"><label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input type="search" id="search" placeholder="Search prompts or case IDs…" aria-label="Search prompts or case IDs"><kbd>/</kbd></label><button id="reset" class="text-button" hidden>Clear filters <span aria-hidden="true">×</span></button></div>
         <div class="results-heading"><div><h2 id="category-title">All applications</h2><p id="result-count" role="status" aria-live="polite"></p></div><span class="view-hint">Select a case to explore <span aria-hidden="true">↗</span></span></div>

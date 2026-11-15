@@ -59,7 +59,4 @@ function moveCase(step){if(!selected)return;const i=filtered.findIndex(x=>x.id==
 $('#previous-case').onclick=()=>moveCase(-1);$('#next-case').onclick=()=>moveCase(1);
 $('#zoom').onclick=()=>{const enlarged=$('.comparison').classList.toggle('reference-enlarged');$('#zoom').textContent=enlarged?'Compare ↙':'Enlarge ↗'};
 document.addEventListener('keydown',e=>{if(e.target.matches('input,textarea')||e.ctrlKey||e.metaKey||e.altKey)return;if(dialog.open){if(e.key==='ArrowLeft'){e.preventDefault();moveCase(-1)}if(e.key==='ArrowRight'){e.preventDefault();moveCase(1)}}else if(e.key==='/'){e.preventDefault();$('#search').focus()}});
-const teaserCases=categories.map(cat=>cases.find(c=>c.category===cat.id));
-$('#teaser').innerHTML=teaserCases.map(c=>`<a href="#cases" data-teaser="${c.id}" aria-label="View ${esc(categoryOf(c.category).label)} example"><img src="${c.poster}" alt="${esc(categoryOf(c.category).label)}" width="640" height="360"><span>${esc(categoryOf(c.category).label)}</span></a>`).join('');
-$('#teaser').addEventListener('click',e=>{const a=e.target.closest('[data-teaser]');if(!a)return;e.preventDefault();openCase(a.dataset.teaser)});
 render();
