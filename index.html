@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="An anonymous visual browser of 220 video, reference image and prompt cases across eight application domains.">
+  <meta name="theme-color" content="#f8faf9">
+  <title>cvm-bench-plus</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css?v=1">
+  <script defer src="catalog.js?v=1"></script>
+  <script defer src="app.js?v=1"></script>
+</head>
+<body>
+  <a href="#results" class="skip">Skip to cases</a>
+  <header class="topbar"><a href="#" class="brand" aria-label="cvm-bench-plus home"><svg viewBox="0 0 30 30" aria-hidden="true"><rect x="1" y="1" width="28" height="28" rx="7"/><path d="m11 8 11 7-11 7z"/></svg><span>cvm-bench-plus</span></a><span class="preview-label"><i></i>Anonymous dataset preview</span></header>
+  <div class="layout">
+    <aside class="sidebar"><p class="eyebrow">APPLICATION DOMAINS</p><nav id="categories" aria-label="Filter by application"></nav><div class="sidebar-note">One case.<br>Three perspectives.<p>Code-rendered motion,<br>a visual reference,<br>and the full prompt.</p></div></aside>
+    <main>
+      <section class="intro"><div><p class="eyebrow">A VISUAL BENCHMARK</p><h1>Explore the possibilities.</h1><p class="lede">Browse code-rendered videos, reference images and prompts across eight application domains.</p></div><div class="totals"><div><strong id="total-cases">220</strong><span>video cases</span></div><div><strong>8</strong><span>domains</span></div></div></section>
+      <section class="browser" aria-label="Dataset cases">
+        <div class="toolbar"><label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m16 16 5 5"/></svg><input type="search" id="search" placeholder="Search prompts or case IDs…" aria-label="Search prompts or case IDs"><kbd>/</kbd></label><button id="reset" class="text-button" hidden>Clear filters <span aria-hidden="true">×</span></button></div>
+        <div class="results-heading"><div><h2 id="category-title">All applications</h2><p id="result-count" role="status" aria-live="polite"></p></div><span class="view-hint">Select a case to explore <span aria-hidden="true">↗</span></span></div>
+        <div id="results" class="grid"></div>
+        <div id="empty" class="empty" hidden><h3>No matching cases.</h3><p>Try another word or clear your filters.</p><button class="button" id="empty-reset">Clear filters</button></div>
+        <nav id="pagination" class="pagination" aria-label="Result pages"></nav>
+      </section>
+      <footer><span>cvm-bench-plus</span><span>220 cases · 8 application domains</span></footer>
+    </main>
+  </div>
+  <dialog id="detail" aria-labelledby="detail-title"><div class="dialog-bar"><div><span id="detail-category" class="eyebrow"></span><h2 id="detail-title"></h2></div><button id="close" class="icon-button" aria-label="Close case">×</button></div><div class="comparison"><section><div class="media-label"><span>Code-rendered video</span><span id="video-meta"></span></div><div class="video-stage"><video id="detail-video" controls playsinline preload="none"></video><span id="media-error" hidden>Video could not load. Close and reopen this case to retry.</span></div></section><section><div class="media-label"><span>Reference image</span><button id="zoom" class="text-button" aria-label="Enlarge reference image">Enlarge ↗</button></div><div class="reference-stage"><img id="detail-reference" alt="Reference image for this case"></div></section></div><div class="prompt-heading"><h3>Prompt</h3><div id="pair-switch" aria-label="Paired cases"></div></div><p id="detail-prompt" class="prompt"></p><div class="dialog-footer"><button id="previous-case" class="text-button">← Previous case</button><span id="case-position"></span><button id="next-case" class="text-button">Next case →</button></div></dialog>
+</body>
+</html>
