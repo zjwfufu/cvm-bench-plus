@@ -28,7 +28,7 @@ function reset(){category='all';query='';page=0;$('#search').value='';render()}
 $('#categories').addEventListener('click',e=>{const b=e.target.closest('[data-category]');if(!b)return;category=b.dataset.category;page=0;render()});
 let searchTimer;$('#search').addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(()=>{query=$('#search').value.trim();page=0;render()},140)});
 $('#reset').onclick=$('#empty-reset').onclick=reset;
-$('.brand').addEventListener('click',e=>{e.preventDefault();reset();window.scrollTo({top:0,behavior:'smooth'})});
+$('.brand')?.addEventListener('click',e=>{e.preventDefault();reset();window.scrollTo({top:0,behavior:'smooth'})});
 $('#pagination').addEventListener('click',e=>{const b=e.target.closest('[data-page]');if(!b||b.disabled)return;page=+b.dataset.page;render();$('#category-title').scrollIntoView({block:'start',behavior:'smooth'})});
 $('#results').addEventListener('click',e=>{const b=e.target.closest('[data-open]');if(b)openCase(b.dataset.open)});
 let previewTimer,previewEpoch=0;
